@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol & Crystal Clean | Mantenimiento de Limpieza y Piscinas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --secondary: #0f172a;
+            --accent: #f59e0b;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --white: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+
+        /* Header / Nav */
+        header { background: var(--white); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+        .logo { font-weight: 700; font-size: 1.4rem; color: var(--primary-dark); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--primary); }
+        .lang-switch { background: #f1f5f9; padding: 6px 12px; border-radius: 20px; text-decoration: none; font-weight: 700; font-size: 0.85rem; color: var(--secondary); border: 1px solid #cbd5e1; }
+        .btn-nav { background: var(--primary); color: var(--white) !important; padding: 8px 18px; border-radius: 20px; font-weight: 600; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(2, 132, 199, 0.75)), 
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 5rem 1.5rem;
+            text-align: center;
+        }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
+        .hero p { font-size: 1.25rem; opacity: 0.95; margin-bottom: 2rem; font-weight: 300; }
+        .hero-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        .btn { padding: 14px 28px; border-radius: 30px; font-weight: 700; text-decoration: none; display: inline-block; transition: all 0.2s; }
+        .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); }
+        .btn-primary:hover { background: #d97706; transform: translateY(-2px); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.2); color: var(--white); backdrop-filter: blur(5px); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.3); }
+
+        /* Features Bar */
+        .features-bar { background: var(--white); border-bottom: 1px solid #e2e8f0; padding: 1.5rem 0; }
+        .features-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: center; padding: 0 1.5rem; }
+        .feature-item { font-weight: 600; color: var(--secondary); font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+
+        /* Container Sections */
+        .section { padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-size: 2.2rem; color: var(--secondary); margin-bottom: 0.5rem; }
+        .section-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+        /* Services Cards Grid */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--white); border-radius: 16px; padding: 30px; box-shadow: var(--shadow); border: 1px solid #f1f5f9; position: relative; transition: transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .card-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+        .card h3 { color: var(--secondary); font-size: 1.3rem; margin-bottom: 10px; }
+        .card-price { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 15px 0 5px 0; }
+        .tax-tag { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px; }
+
+        /* Tables */
+        .table-container { background: var(--white); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; margin-top: 2rem; border: 1px solid #e2e8f0; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th { background: var(--primary); color: var(--white); padding: 18px 20px; font-weight: 600; }
+        td { padding: 18px 20px; border-bottom: 1px solid #f1f5f9; }
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) { background-color: #f8fafc; }
+
+        /* Testimonials */
+        .testimonials { background: #e0f2fe; border-radius: 24px; padding: 3rem 2rem; margin: 3rem auto; }
+        .testimonial-card { background: var(--white); padding: 25px; border-radius: 16px; box-shadow: var(--shadow); }
+        .testimonial-card p { font-style: italic; color: var(--text-dark); margin-bottom: 15px; }
+        .client-name { font-weight: 700; color: var(--primary-dark); font-size: 0.95rem; }
+
+        /* Contact & CTA Section */
+        .contact-box { background: var(--secondary); color: var(--white); border-radius: 24px; padding: 4rem 2rem; text-align: center; margin-top: 4rem; }
+        .contact-box h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+        .contact-box p { opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        /* Floating WhatsApp Button */
+        .float-whatsapp { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; z-index: 1000; transition: transform 0.2s; }
+        .float-whatsapp:hover { transform: scale(1.1); }
+
+        footer { text-align: center; padding: 30px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid #e2e8f0; margin-top: 4rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">✨ Sol & Crystal Clean</a>
+            <nav class="nav-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#precios">Precios</a>
+                <a href="#opiniones">Opiniones</a>
+                <a href="index.html" class="lang-switch">🇬🇧 English</a>
+                <a href="https://wa.me/34000000000" class="btn-nav">Contactar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Piscinas Cristalinas y Propiedades Impecables</h1>
+            <p>Servicios profesionales de limpieza de viviendas y mantenimiento de piscinas para villas, residencias y alquiler vacacional en la Costa del Sol.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/34000000000" class="btn btn-primary">💬 Presupuesto Inmediato</a>
+                <a href="#precios" class="btn btn-secondary">Ver Planes de Precios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Bar -->
+    <div class="features-bar">
+        <div class="features-container">
+            <div class="feature-item">📍 Marbella • Fuengirola • Mijas • Estepona</div>
+            <div class="feature-item">🇬🇧 Atención en Inglés y Español</div>
+            <div class="feature-item">🛡️ Empadronados y Asegurados</div>
+            <div class="feature-item">⭐ Servicio de Custodia de Llaves</div>
+        </div>
+    </div>
+
+    <!-- Pool Services -->
+    <section class="section" id="servicios">
+        <div class="section-header">
+            <h2>Mantenimiento de Piscinas</h2>
+            <p>Mantenga su piscina impecable, equilibrada y lista para el baño todo el año.</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="card">
+                <span class="card-icon">🏊‍♂️</span>
+                <h3>Piscina Pequeña</h3>
+                <p>Ideal para piscinas pequeñas y casas residenciales (Hasta 30 m³).</p>
+                <div class="card-price">85 € – 105 € <small>/ mes</small></div>
+                <div class="tax-tag">* Precios sin IVA (+21%)</div>
+                <p><strong>Visita semanal + tratamiento químico estándar incluido.</strong></p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">Puesta a punto (Limpieza a fondo): 90 € – 130 €</p>
+            </div>
+
+            <div class="card" style="border: 2px solid var(--primary);">
+                <span class="card-icon">🏡</span>
+                <h3>Piscina Mediana</h3>
+                <p>Perfecta para villas familiares y casas de vacaciones (Hasta 50 m³).</p>
+                <div class="card-price">110 € – 130 € <small>/ mes</small></div>
+                <div class="tax-tag">* Precios sin IVA (+21%)</div>
+                <p><strong>Visita semanal + control químico completo y revisión de filtros.</strong></p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">Puesta a punto (Limpieza a fondo): 130 € – 170 €</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🏰</span>
+                <h3>Piscina Grande / Villa</h3>
+                <p>Diseñada para grandes fincas y propiedades de lujo (Hasta 80 m³).</p>
+                <div class="card-price">140 € – 180 € <small>/ mes</small></div>
+                <div class="tax-tag">* Precios sin IVA (+21%)</div>
+                <p><strong>Visita semanal + mantenimiento intensivo de depuradora y agua.</strong></p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">Puesta a punto (Limpieza a fondo): 180 € – 250 €</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- House Cleaning Services -->
+    <section class="section" id="precios" style="padding-top: 0;">
+        <div class="section-header">
+            <h2>Limpieza de Viviendas y Alquiler Vacacional</h2>
+            <p>Servicios de limpieza fiables para propietarios y anfitriones de Airbnb.</p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Servicio</th>
+                        <th>Detalles Incluidos</th>
+                        <th>Tarifa Estándar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Limpieza Regular de Casa</strong></td>
+                        <td>Mantenimiento periódico para viviendas habituales (Mín. 3 horas).</td>
+                        <td><strong>18 € – 22 €</strong> / hora</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Turnover / Cambio de Huéspedes</strong></td>
+                        <td>Limpieza completa para alquiler vacacional (1-2 Dormitorios). Ropa de cama y toallas incluidas.</td>
+                        <td><strong>70 € – 90 €</strong> / servicio</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Limpieza a Fondo / Fin de Obra</strong></td>
+                        <td>Limpieza detallada para mudanzas, puestas a punto o reformas.</td>
+                        <td><strong>22 € – 28 €</strong> / hora</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="text-align: right; font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">* Todos los precios están sujetos al IVA estándar (+21%).</p>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section" id="opiniones">
+        <div class="section-header">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <p>De confianza para propietarios y gestores de alquileres en la Costa del Sol.</p>
+        </div>
+
+        <div class="testimonials grid-3">
+            <div class="testimonial-card">
+                <p>"Sol & Crystal Clean cuidan de nuestra villa en Marbella. El servicio de piscina es impecable y los huéspedes siempre dejan valoraciones de 5 estrellas."</p>
+                <div class="client-name">— Mark & Sarah T. (Marbella)</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Gestión de llaves y limpieza de cambio para mis apartamentos en Fuengirola. ¡Muy puntuales, serios y atentos!"</p>
+                <div class="client-name">— David L. (Fuengirola)</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"La limpieza a fondo antes de nuestras vacaciones fue excelente. El agua de la piscina quedó cristalina."</p>
+                <div class="client-name">— Elena R. (Estepona)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact -->
+    <section class="section">
+        <div class="contact-box">
+            <h2>¿Necesita un Paquete Personalizado?</h2>
+            <p>Contáctenos directamente por WhatsApp para recibir un presupuesto a medida sin compromiso.</p>
+            <a href="https://wa.me/34000000000" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 36px;">💬 Hablar por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/34000000000" class="float-whatsapp" target="_blank" title="Contactar por WhatsApp">
+        💬
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sol & Crystal Clean Services. Todos los derechos reservados. Empresa registrada en España.</p>
+    </footer>
+
+</body>
+</html>
