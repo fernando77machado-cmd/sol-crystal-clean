@@ -3,111 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sol & Crystal Clean Services</title>
+    <title>Sol & Crystal Clean</title>
     <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #fafaf9; color: #292524; }
-        
-        .hero { background: linear-gradient(rgba(12, 74, 110, 0.7), rgba(12, 74, 110, 0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover; color: white; padding: 4rem 1rem; text-align: center; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 0.5rem; color: #f0fdf4; }
-        .hero p { font-size: 1.2rem; font-weight: 300; }
-
-        .wrapper { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-
-        .service-header { text-align: center; margin-bottom: 30px; }
-        .service-header h2 { color: #0284c7; font-size: 2rem; margin-bottom: 5px; }
-
-        .price-table { width: 100%; border-collapse: separate; border-spacing: 0; background: white; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; }
-        .price-table th { background: #0284c7; color: white; padding: 18px; font-size: 1rem; }
-        .price-table td { padding: 18px; border-bottom: 1px solid #f1f5f9; }
-        .price-table tr:last-child td { border-bottom: none; }
-
-        .tax-disclaimer { text-align: right; font-size: 0.85rem; color: #78716c; margin-top: 10px; margin-bottom: 40px; font-style: italic; }
-
-        .highlight-card { background: #0c4a6e; color: white; border-radius: 20px; padding: 40px 20px; text-align: center; }
-        .btn-gold { background: #f59e0b; color: white; padding: 15px 35px; text-decoration: none; font-weight: bold; border-radius: 50px; display: inline-block; margin-top: 15px; font-size: 1.1rem; }
-
-        footer { text-align: center; padding: 25px; color: #a8a29e; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background: #111827; color: #f9fafb; padding: 20px; }
+        .box { max-width: 600px; margin: 0 auto; background: #1f2937; padding: 25px; border-radius: 16px; border: 1px solid #374151; }
+        h1 { color: #38bdf8; font-size: 1.8rem; text-align: center; margin-top: 0; }
+        .sub { text-align: center; color: #9ca3af; font-size: 0.95rem; margin-bottom: 25px; }
+        h2 { color: #f3f4f6; font-size: 1.2rem; border-bottom: 1px solid #374151; padding-bottom: 8px; margin-top: 25px; }
+        .item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #2d3748; }
+        .item-name { font-weight: 500; }
+        .item-price { color: #38bdf8; font-weight: bold; }
+        .tax-note-dark { font-size: 0.75rem; color: #9ca3af; text-align: right; margin-top: 6px; }
+        .btn-full { display: block; background: #25d366; color: white; text-align: center; padding: 16px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin-top: 30px; }
+        footer { text-align: center; color: #6b7280; font-size: 0.8rem; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <section class="hero">
+    <div class="box">
         <h1>Sol & Crystal Clean</h1>
-        <p>Property Care & Pool Maintenance in Costa del Sol</p>
-    </section>
+        <div class="sub">Marbella • Fuengirola • Mijas • Estepona<br>🇬🇧 English Service Available</div>
 
-    <div class="wrapper">
-        <div class="service-header">
-            <h2>Pool Maintenance & Deep Clean</h2>
-            <p>Serving Marbella, Fuengirola, Mijas & Estepona</p>
-        </div>
+        <h2>🏊 Pool Maintenance (Monthly)</h2>
+        <div class="item"><span class="item-name">Small (up to 30 m³)</span><span class="item-price">85€ – 105€/mo</span></div>
+        <div class="item"><span class="item-name">Medium (up to 50 m³)</span><span class="item-price">110€ – 130€/mo</span></div>
+        <div class="item"><span class="item-name">Large / Villa (up to 80 m³)</span><span class="item-price">140€ – 180€/mo</span></div>
+        <div class="tax-note-dark">* Prices exclude +21% IVA</div>
 
-        <table class="price-table">
-            <thead>
-                <tr>
-                    <th>Pool Size</th>
-                    <th>Monthly Care</th>
-                    <th>One-Off Deep Clean</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Small</strong> (Up to 30 m³)</td>
-                    <td>85 € – 105 € / mo</td>
-                    <td>90 € – 130 €</td>
-                </tr>
-                <tr>
-                    <td><strong>Medium</strong> (Up to 50 m³)</td>
-                    <td>110 € – 130 € / mo</td>
-                    <td>130 € – 170 €</td>
-                </tr>
-                <tr>
-                    <td><strong>Large / Villa</strong> (Up to 80 m³)</td>
-                    <td>140 € – 180 € / mo</td>
-                    <td>180 € – 250 €</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="tax-disclaimer">* All rates are subject to +21% IVA</div>
+        <h2>🧹 House & Rental Cleaning</h2>
+        <div class="item"><span class="item-name">Regular Cleaning</span><span class="item-price">18€ – 22€ / hr</span></div>
+        <div class="item"><span class="item-name">Turnover (1-2 Beds)</span><span class="item-price">70€ – 90€ / clean</span></div>
+        <div class="item"><span class="item-name">Deep Clean</span><span class="item-price">22€ – 28€ / hr</span></div>
+        <div class="tax-note-dark">* Prices exclude +21% IVA</div>
 
-        <div class="service-header">
-            <h2>House & Vacation Rental Cleaning</h2>
-        </div>
-
-        <table class="price-table">
-            <thead>
-                <tr>
-                    <th>Service</th>
-                    <th>Rate</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Regular House Cleaning</strong></td>
-                    <td>18 € – 22 € / hr (Min. 3h)</td>
-                </tr>
-                <tr>
-                    <td><strong>Turnover / Changeover (1-2 Bed)</strong></td>
-                    <td>70 € – 90 € / clean</td>
-                </tr>
-                <tr>
-                    <td><strong>Deep Clean / Post-Renovation</strong></td>
-                    <td>22 € – 28 € / hr</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="tax-disclaimer">* All rates are subject to +21% IVA</div>
-
-        <div class="highlight-card">
-            <h2>Need a Tailored Quote?</h2>
-            <p>We speak fluent English & Spanish. Get in touch with us directly via WhatsApp.</p>
-            <a href="https://wa.me/34000000000" class="btn-gold">Contact via WhatsApp</a>
-        </div>
+        <a href="https://wa.me/34000000000" class="btn-full">📱 Book via WhatsApp</a>
     </div>
 
-    <footer>
-        &copy; 2026 Sol & Crystal Clean Services
-    </footer>
+    <footer>&copy; 2026 Sol & Crystal Clean Services</footer>
 
 </body>
 </html>
